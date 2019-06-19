@@ -1,0 +1,77 @@
+\documentclass[TS,authoryear,toc,lsstdraft]{lsstdoc}
+% lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
+
+% Package imports go here.
+
+% Local commands go here.
+
+\input meta.tex
+
+% To add a short-form title:
+\title{T\&S Software Products}
+
+% Optional subtitle
+% \setDocSubtitle{A subtitle}
+
+\author{%
+Gabriele Comoretto
+}
+
+\setDocRef{TSTN-001}
+
+\date{\today}
+
+% Optional: name of the document's curator
+% \setDocCurator{The Curator of this Document}
+
+\setDocAbstract{%
+Telescope \& Site Software Products
+}
+
+% Change history defined here.
+% Order: oldest first.
+% Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
+% See LPM-51 for version number policy.
+\setDocChangeRecord{%
+  \addtohist{}{2019-06-18}{draft}{Gabriele Comoretto}
+}
+
+
+\begin{document}
+
+\setDocUpstreamLocation{\url{https://github.com/ts-e/tstn-001}}
+\setDocUpstreamVersion{\vcsrevision}
+
+\maketitle
+
+\section{Introduction}
+
+This document should document all T\&S software products.
+
+
+\newpage
+\section{T\&S Software Products}
+
+\subsection{CSCs - XML Interfaces}
+
+\subsubsection{SALGeneric XML Interface}
+
+\input{csc.tex}
+
+\newpage
+\subsection{Other Software Products}
+
+
+\subsubsection{SAL}
+
+
+\appendix
+\newpage
+\section{References} \label{sec:bib}
+\bibliography{lsst,lsst-ts,refs_ads,refs,books,local}
+
+
+%Make sure lsst-texmf/bin/generateAcronyms.py is in your path
+\section{Acronyms used in this document}\label{sec:acronyms}
+\input{acronyms.tex}
+\end{document}
