@@ -49,26 +49,64 @@ Telescope \& Site Software Products
 This document should document all T\&S software products.
 
 
+\subsection{Applicable Documents}
+
+%\begin{tabbing}
+%AUTH-NUM\= \kill
+%\citeds{LDM-148} \>     DM Architecture\\
+%\end{tabbing}
+
+The \citeds{TsDevGuide} is applicable to this document.
+
+
 \newpage
-\section{T\&S Software Products}
+\section{T\&S Software Products} \label{sec:tsswp}
 
-\subsection{CSCs - XML Interfaces}
 
-\subsubsection{SALGeneric XML Interface}
+\subsection{Non CSC Software Products} \label{sec:nonops}
+
+
+\input{nonops.tex}
+
+
+\subsection{CSCs - XML Interfaces} \label{sec:cscs}
+
+
+\subsubsection{Generic XML Interface}
+
+\textbf{Acronym}: 
+
+\textbf{Description}:
+This is the top level XML configuration file, used by all others XML interfaces, and therefore by all others CSCs.
+
+\begin{longtable}[]{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+\hline
+\multicolumn{4}{c}{\textbf{Personell}} \\ \hline
+Owner(s)     & Developers & LSST PoC   & Product Owner & Provider Company & External PoC \\ \hline
+             & All        &            &               &                  &              \\ \hline
+\end{longtable}
+
+\begin{longtable}[]{rll}
+\hline
+\multicolumn{3}{c}{\textbf{Resources}} \\ \hline
+xml repository & \url{https://github.com/lsst-ts/ts-xml/ATAOTS} & xml \\ \hline
+xml pkgs repo  &                                                &  \\ \hline
+\end{longtable}
+
 
 \input{csc.tex}
 
+
 \newpage
-\subsection{Other Software Products}
+\section{T\&S 3rd Party Software} \label{sec:3rd}
 
-
-\subsubsection{SAL}
+\input{3rdparty.tex}
 
 
 \appendix
 \newpage
 \section{References} \label{sec:bib}
-\bibliography{lsst,lsst-ts,refs_ads,refs,books,local}
+\bibliography{lsst,refs_ads,refs,books,local}
 
 
 %Make sure lsst-texmf/bin/generateAcronyms.py is in your path
