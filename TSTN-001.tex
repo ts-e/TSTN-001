@@ -1,0 +1,115 @@
+\documentclass[TS,authoryear,toc,lsstdraft]{lsstdoc}
+% lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
+
+% Package imports go here.
+
+% Local commands go here.
+
+\input meta.tex
+
+% To add a short-form title:
+\title{T\&S Software Products}
+
+% Optional subtitle
+% \setDocSubtitle{A subtitle}
+
+\author{%
+Gabriele Comoretto
+}
+
+\setDocRef{TSTN-001}
+
+\date{\today}
+
+% Optional: name of the document's curator
+% \setDocCurator{The Curator of this Document}
+
+\setDocAbstract{%
+Telescope \& Site Software Products
+}
+
+% Change history defined here.
+% Order: oldest first.
+% Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
+% See LPM-51 for version number policy.
+\setDocChangeRecord{%
+  \addtohist{}{2019-06-18}{draft}{Gabriele Comoretto}
+}
+
+
+\begin{document}
+
+\setDocUpstreamLocation{\url{https://github.com/ts-e/tstn-001}}
+\setDocUpstreamVersion{\vcsrevision}
+
+\maketitle
+
+\section{Introduction}
+
+This document should document all T\&S software products.
+
+
+\subsection{Applicable Documents}
+
+%\begin{tabbing}
+%AUTH-NUM\= \kill
+%\citeds{LDM-148} \>     DM Architecture\\
+%\end{tabbing}
+
+The \citeds{TsDevGuide} is applicable to this document.
+
+
+\newpage
+\section{T\&S Software Products} \label{sec:tsswp}
+
+
+\subsection{Non CSC Software Products} \label{sec:nonops}
+
+
+\input{nonops.tex}
+
+
+\subsection{CSCs - XML Interfaces} \label{sec:cscs}
+
+
+\subsubsection{Generic XML Interface}
+
+\textbf{Acronym}: 
+
+\textbf{Description}:
+This is the top level XML configuration file, used by all others XML interfaces, and therefore by all others CSCs.
+
+\begin{longtable}[]{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+\hline
+\multicolumn{4}{c}{\textbf{Personell}} \\ \hline
+Owner(s)     & Developers & LSST PoC   & Product Owner & Provider Company & External PoC \\ \hline
+             & All        &            &               &                  &              \\ \hline
+\end{longtable}
+
+\begin{longtable}[]{rll}
+\hline
+\multicolumn{3}{c}{\textbf{Resources}} \\ \hline
+xml repository & \url{https://github.com/lsst-ts/ts-xml/ATAOTS} & xml \\ \hline
+xml pkgs repo  &                                                &  \\ \hline
+\end{longtable}
+
+
+\input{csc.tex}
+
+
+\newpage
+\section{T\&S 3rd Party Software} \label{sec:3rd}
+
+\input{3rdparty.tex}
+
+
+\appendix
+\newpage
+\section{References} \label{sec:bib}
+\bibliography{lsst,refs_ads,refs,books,local}
+
+
+%Make sure lsst-texmf/bin/generateAcronyms.py is in your path
+\section{Acronyms used in this document}\label{sec:acronyms}
+\input{acronyms.tex}
+\end{document}
